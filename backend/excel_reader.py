@@ -7,7 +7,7 @@ from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
 
 from .models import GridRegion, SheetModel, WorkbookModel
-from .time_parser import find_time_ranges, parse_time_range
+from .time_parser import find_time_ranges, parse_time, parse_time_range
 
 
 MONTHS = {
@@ -64,6 +64,8 @@ def _title_from_text(text: str) -> str | None:
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     if lines and parse_time_range(lines[0]) != (None, None):
         lines = lines[1:]
+    elif len(lines) > 1 and parse_time(lines[0]) is not None:
+        return f"{lines[0]} {lines[1]}"
     return lines[0] if lines else None
 
 

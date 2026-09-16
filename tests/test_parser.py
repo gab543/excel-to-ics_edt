@@ -141,6 +141,12 @@ def test_excel_holiday_spelling_with_final_accent_is_assumed_full_day():
     assert event.warnings == ()
 
 
+def test_single_time_line_keeps_the_following_event_name():
+    region = GridRegion("Test:R1", "Test", 10, 2026, 13, 1, 1, 1, 1, "13h\nleçcons du mardi", ("A1",), None)
+    event = detect_events(WorkbookModel((SheetModel("Test", (region,)),)))[0]
+    assert event.title == "13h leçcons du mardi"
+
+
 def test_week_marker_with_missing_hours_is_assumed_full_day():
     region = GridRegion("Test:R1", "Test", 8, 2026, 31, 1, 1, 1, 1, "Semaine introductive", ("A1",), None)
     event = detect_events(WorkbookModel((SheetModel("Test", (region,)),)))[0]
