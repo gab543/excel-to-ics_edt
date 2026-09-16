@@ -1,0 +1,6 @@
+fastapi
+icalendar
+openpyxl
+pytest
+uvicorn
+python-multipart

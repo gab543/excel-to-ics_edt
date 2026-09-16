@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;600;700&display=swap');
+
+:root { color: #24302b; background: #f3f0e8; font-family: Manrope, sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at 90% 0%, #e6d4ba 0, transparent 32rem), #f3f0e8; }
+main { max-width: 1080px; margin: auto; padding: 7rem 2rem 5rem; }
+header { max-width: 700px; }
+.kicker { color: #9a5b37; font: 500 .72rem 'DM Mono', monospace; letter-spacing: .08em; margin: 0 0 1rem; }
+h1, h2 { font-family: Fraunces, Georgia, serif; letter-spacing: 0; line-height: .98; margin: 0; }
+h1 { font-size: clamp(3.8rem, 8vw, 7rem); font-weight: 700; }
+h1 em { color: #9a5b37; font-style: normal; }
+.lede { font-size: 1.05rem; line-height: 1.7; max-width: 560px; color: #647069; margin: 2rem 0 3rem; }
+.upload-panel { border-top: 1px solid #c9c4b7; border-bottom: 1px solid #c9c4b7; padding: 2rem 0; }
+.dropzone { min-height: 170px; border: 1px dashed #9a5b37; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; cursor: pointer; background: #f8f5edaa; transition: background .2s, transform .2s; }
+.dropzone:hover { background: #fffaf1; transform: translateY(-2px); }
+.dropzone span:not(.upload-icon) { color: #8a9189; font-size: .82rem; }
+.upload-icon { font: 2rem 'DM Mono', monospace; color: #9a5b37; }
+input { display: none; }
+.error { color: #a43e34; font-size: .9rem; }
+.results { margin-top: 4rem; }
+.results-heading { display: flex; justify-content: space-between; gap: 2rem; align-items: end; }
+h2 { font-size: 2.7rem; }
+button { border: 0; background: #24302b; color: #f3f0e8; padding: .9rem 1.2rem; font: 600 .85rem Manrope; cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .4; }
+button span { color: #df9a67; font-size: 1.1rem; margin-left: .5rem; }
+.stats { display: flex; gap: 2rem; margin: 1.5rem 0; color: #68746d; font-size: .85rem; }
+.stats b { color: #24302b; font-size: 1.2rem; margin-right: .35rem; }.stats .warn b, .warn { color: #a35c32; }
+.calendar-controls { display: flex; align-items: center; gap: .8rem; margin: 1.5rem 0; color: #68746d; font-size: .8rem; }.calendar-controls label { font: 500 .7rem 'DM Mono', monospace; text-transform: uppercase; color: #9a5b37; }.calendar-controls select { border: 1px solid #c9c4b7; border-radius: 0; background: #f8f5ed; color: #24302b; padding: .65rem .8rem; font: 600 .8rem Manrope, sans-serif; max-width: 100%; }
+.review-queue { margin-top: 2rem; border-top: 1px solid #c9c4b7; }.review-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; padding: 1.4rem 0; }.review-heading h3 { margin: 0; font: 600 1.7rem Fraunces, Georgia, serif; }.review-heading > span { color: #7d877f; font-size: .78rem; }.review-item { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; border-bottom: 1px solid #ded9cd; border-radius: 0; background: transparent; color: #24302b; text-align: left; padding: 1rem 0; }.review-item:hover { background: #eee4d5; padding-left: .7rem; padding-right: .7rem; }.review-item small { display: block; color: #7d877f; font-size: .75rem; margin-top: .3rem; }.review-item b { color: #a35c32; font: 500 .7rem 'DM Mono', monospace; text-transform: uppercase; }.review-actions { display: flex; gap: .7rem; margin-top: 1rem; }.secondary-action { background: transparent; border: 1px solid #9a5b37; color: #9a5b37; }.status-ok { color: #41675d !important; font-size: .8rem; }.status-muted { color: #7d877f !important; font-size: .8rem; }
+.calendar-shell { margin: 2rem 0; overflow: hidden; border: 1px solid #c9c4b7; background: #f8f5ed; }.fc { --fc-border-color: #ded9cd; --fc-button-bg-color: #24302b; --fc-button-border-color: #24302b; --fc-button-hover-bg-color: #9a5b37; --fc-today-bg-color: #eee4d5; --fc-page-bg-color: #f8f5ed; --fc-neutral-bg-color: #eee9df; font-family: Manrope, sans-serif; }.fc .fc-toolbar-title { font: 600 1.3rem Fraunces, Georgia, serif; }.fc .fc-button { border-radius: 0; font: 600 .72rem Manrope, sans-serif; text-transform: none; }.fc .fc-timegrid-slot { height: 3.2rem; }.fc .fc-col-header-cell-cushion, .fc .fc-timegrid-slot-label-cushion { color: #68746d; font-size: .72rem; }.fc .fc-event { border: 0; border-radius: 2px; padding: 2px 4px; cursor: pointer; }.fc .calendar-event-ready { background: #41675d; }.fc .calendar-event-review { background: #b8784e; }.event-detail { display: flex; justify-content: space-between; gap: 2rem; margin: 0 0 2rem; padding: 1.4rem; border-left: 3px solid #9a5b37; background: #eee4d5; }.event-detail h3 { font: 600 1.7rem Fraunces, Georgia, serif; margin: 0 0 .5rem; }.event-detail p { margin: .3rem 0; color: #68746d; }.event-detail small { display: block; margin-top: .8rem; color: #68746d; }.close-detail { align-self: start; padding: .25rem .6rem; font-size: 1.3rem; }
+@media (max-width: 700px) { main { padding: 4rem 1.25rem; } .results-heading { display: block; } .results-heading button { margin-top: 1.5rem; } .calendar-controls { align-items: flex-start; flex-direction: column; } .calendar-controls select { width: 100%; } .review-heading { display: block; }.review-heading > span { display: block; margin-top: .8rem; } }
